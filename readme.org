@@ -1,6 +1,6 @@
 #+TITLE: Dotfiles
 
-Managed with Chezmoi. Currently only really supports macOS, but that might change as I deploy more random Linux images that need my tmux config and not much else.
+Managed with Chezmoi. Currently only really supports macOS, but that might change as I deploy more random Linux images that need my tmux config and not much else. Note that this is basically untested, but is instructed according to my best memory.
 
 #+begin_src bash
 brew install chezmoi
