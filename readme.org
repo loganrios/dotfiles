@@ -1,0 +1,11 @@
+#+TITLE: Dotfiles
+
+Managed with Chezmoi. Currently only really supports macOS, but that might change as I deploy more random Linux images that need my tmux config and not much else.
+
+#+begin_src bash
+brew install chezmoi
+chezmoi init --apply https://github.com/loganrios/dotfiles.git
+$HOME/.config/macos-setup
+brew bundle --file $HOME/.config/Brewfile
+bupper; dupper
+#+end_src
