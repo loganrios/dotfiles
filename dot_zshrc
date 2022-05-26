@@ -1,0 +1,50 @@
+# Prompt rice
+PROMPT='%F{cyan}%2~%f %# '
+
+# Basic opts
+setopt AUTO_CD
+
+# Env vars
+export EDITOR="emacs -nw"
+export GOPATH="$HOME/go"
+
+# Dotfiles-specific stuff
+# export DOTFILES="$HOME/.cfg"
+# alias config="git --git-dir=$DOTFILES --work-tree=$HOME"
+
+# Pathings
+export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+## Java pathings
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+
+# Aliases
+alias \
+	la="ls -alh" \
+	ll="ls -lh" \
+	e="$EDITOR"
+
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -v"
+
+alias ls="exa"
+alias cljmm="clj -M -m"
+
+## ssh keys for me
+alias   sshlr="ssh logan@loganrios.com"
+
+# Vim everywhere
+bindkey -v '^?' backward-delete-char
+
+# Highlighting! Should generally be run last.
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

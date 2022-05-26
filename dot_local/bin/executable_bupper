@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+BREWFILE="$HOME/.config/Brewfile"
+
+# Because `pacman -Syu` is so hard :|
+brew update
+brew upgrade
+brew cleanup
+brew autoremove
+
+# Make sure we always have an up-to-date Brewfile
+rm -fv "$BREWFILE"
+brew bundle dump --file "$BREWFILE"

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "Recording... give about 5 seconds."
+screencapture -v -g $(date +"%Y%m%d%H%M%S").mov
+

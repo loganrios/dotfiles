@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Doomacs upgrade script
+doom --yes upgrade
+doom sync
