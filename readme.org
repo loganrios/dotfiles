@@ -9,3 +9,11 @@ $HOME/.config/macos-setup
 brew bundle --file $HOME/.config/Brewfile
 bupper; dupper
 #+end_src
+
+* Parinfer
+#+begin_src bash
+git clone https://github.com/eraserhd/parinfer-rust.git
+cd parinfer-rust
+cargo build --release --features emacs
+cp target/release/libparinfer_rust.dylib ~/.emacs.d/.local/etc/parinfer-rust/parinfer-rust-darwin.so
+#+end_src
